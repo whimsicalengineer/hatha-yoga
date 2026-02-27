@@ -17,10 +17,10 @@ html, body { margin: 0; padding: 0; }
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   background: linear-gradient(
-    180deg,
+    135deg,
     #D8CBB7 0%,
-    #D1C8B1 30%,
-    #D7C4A8 65%,
+    #CFC6A8 40%,
+    #D7C4A8 75%,
     #E2BFA3 100%
   );
   color: var(--text);
