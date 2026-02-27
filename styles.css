@@ -17,11 +17,12 @@ html, body { margin: 0; padding: 0; }
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   background: linear-gradient(
-    135deg,
-    #f7f2e8 0%,
-    #cad6bf 35%,
-    #b8d1b6 70%,
-    #ACD1A9 100%
+    160deg,
+    #D8CBB7 0%,
+    #D6CDB8 20%,
+    #D1C8B1 40%,
+    #D7C4A8 70%,
+    #E2BFA3 100%
   );
   color: var(--text);
   line-height: 1.6;
@@ -78,7 +79,7 @@ h1{
 }
 
 .card{
-  background: var(--card);
+  background: rgba(255, 250, 240, 0.94);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
