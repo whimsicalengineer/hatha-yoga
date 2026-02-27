@@ -4,11 +4,11 @@
   --bg-2: #242f1f;     /* olive moss */
   --bg-3: #2f3b27;     /* slightly lighter olive */
 
-  --moss-strong: #3a4f2a;      /* deep moss green */
-  --moss-deep: #2f3f22;        /* darker moss */
+  --moss-strong: #334624;   /* darker by ~5% */
+  --moss-deep: #28381d;     /* slightly deeper */
   --moss-text: #e8efe2;        /* soft light green text */
-  --moss:  #3c512a;    /* greenish-green (no blue/gray) */
-  --olive: #556b2f;    /* classic olive */
+  --moss:  #344823;    /* greenish-green (no blue/gray) */
+  --olive: #4e6129;    /* classic olive */
   --prairie:#6a634e;   /* earthy neutral */
   --coffee:#7b5a3a;    /* warm brown */
   --autumn:#8a4b1f;    /* rust */
