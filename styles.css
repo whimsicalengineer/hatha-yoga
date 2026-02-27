@@ -1,23 +1,12 @@
 :root{
-  /* Earth base (lighter than before) */
-  --bg: #0f1411;                  /* deep moss */
-  --card: rgba(42, 47, 41, 0.92); /* soft moss card */
-  --text: #f2efe7;               
-  --muted: rgba(242,239,231,0.75);
-
-  /* Palette accents */
-  --moss: #2f3a32; 
-  --prairie: #6e644f;
-  --coffee: #8b6a4a;
-  --autumn: #9a5a22;
-  --sand: #b8aa94;
-  --wheat: #d9cfbf;
-
-  --accent: #d9cfbf;
-  --accent-2: #b8aa94;
-
-  --border: rgba(217,207,191,0.12);
-  --shadow: 0 12px 30px rgba(0,0,0,0.25);
+  --bg: #f7f2e8;         /* beige */
+  --card: #fffaf0;       /* warm off-white */
+  --text: #1f2937;       /* deep slate */
+  --muted: #56616b;
+  --sage: #7a8f7a;       /* sage */
+  --sage-dark: #5f775f;
+  --border: rgba(31,41,55,0.10);
+  --shadow: 0 10px 30px rgba(31,41,55,0.08);
   --radius: 18px;
 }
 
@@ -25,11 +14,9 @@
 html, body { margin: 0; padding: 0; }
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  background:
-    radial-gradient(900px 600px at 18% 10%, rgba(47,58,50,0.55), transparent 60%),   /* moss glow */
-    radial-gradient(900px 600px at 85% 18%, rgba(106,99,78,0.38), transparent 62%),  /* prairie glow */
-    radial-gradient(900px 700px at 70% 92%, rgba(138,75,31,0.22), transparent 65%),  /* autumn warmth */
-    linear-gradient(135deg, #0f1411 0%, #141a16 40%, #0f1411 100%);
+  background: radial-gradient(1200px 600px at 10% 0%, rgba(122,143,122,0.18), transparent 50%),
+              radial-gradient(1200px 600px at 90% 0%, rgba(122,143,122,0.12), transparent 55%),
+              var(--bg);
   color: var(--text);
   line-height: 1.6;
 }
@@ -85,7 +72,7 @@ h1{
 }
 
 .card{
-  background: rgba(50, 56, 47, 0.95);
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
