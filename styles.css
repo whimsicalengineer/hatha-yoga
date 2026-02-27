@@ -1,12 +1,12 @@
 :root{
   /* Earth base (lighter than before) */
-  --bg: #2a2f29;                 /* deep moss */
+  --bg: #2b2f22;                  /* deep moss */
   --card: rgba(42, 47, 41, 0.92); /* soft moss card */
   --text: #f2efe7;               
   --muted: rgba(242,239,231,0.75);
 
   /* Palette accents */
-  --moss: #3f4a3e;
+  --moss: #4a5a34; 
   --prairie: #6e644f;
   --coffee: #8b6a4a;
   --autumn: #9a5a22;
@@ -29,6 +29,7 @@ body{
     radial-gradient(900px 600px at 15% 10%, rgba(63,74,62,0.45), transparent 60%),
     radial-gradient(900px 600px at 85% 15%, rgba(110,100,79,0.35), transparent 65%),
     radial-gradient(900px 700px at 75% 90%, rgba(154,90,34,0.25), transparent 70%),
+    radial-gradient(1100px 800px at 92% 92%, rgba(217,207,191,0.28), transparent 68%),
     linear-gradient(135deg, #2a2f29 0%, #34382f 40%, #2a2f29 100%);
   color: var(--text);
   line-height: 1.6;
