@@ -1,24 +1,23 @@
 :root{
-  /* Earthy dark base */
-  --bg: #0f1411;              /* deep moss-black */
-  --card: rgba(18, 20, 17, 0.92);  /* dark card glass */
-  --text: #f2efe7;            /* wheat-ish text */
-  --muted: rgba(242,239,231,0.72);
+  /* Earth base (lighter than before) */
+  --bg: #2a2f29;                 /* deep moss */
+  --card: rgba(42, 47, 41, 0.92); /* soft moss card */
+  --text: #f2efe7;               
+  --muted: rgba(242,239,231,0.75);
 
-  /* Palette accents (from your image vibe) */
-  --moss: #2f3a32;            /* moss */
-  --prairie: #6a634e;         /* prairie grass */
-  --coffee: #8b6a4a;          /* coffee */
-  --autumn: #8a4b1f;          /* autumn rust */
-  --sand: #b8aa94;            /* sand */
-  --wheat: #d9cfbf;           /* wheat */
+  /* Palette accents */
+  --moss: #3f4a3e;
+  --prairie: #6e644f;
+  --coffee: #8b6a4a;
+  --autumn: #9a5a22;
+  --sand: #b8aa94;
+  --wheat: #d9cfbf;
 
-  /* Use wheat/sand for links instead of green */
-  --accent: #d9cfbf;          /* wheat */
-  --accent-2: #b8aa94;        /* sand */
+  --accent: #d9cfbf;
+  --accent-2: #b8aa94;
 
-  --border: rgba(217,207,191,0.14);
-  --shadow: 0 14px 40px rgba(0,0,0,0.35);
+  --border: rgba(217,207,191,0.12);
+  --shadow: 0 12px 30px rgba(0,0,0,0.25);
   --radius: 18px;
 }
 
@@ -27,10 +26,10 @@ html, body { margin: 0; padding: 0; }
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   background:
-    radial-gradient(900px 600px at 18% 10%, rgba(47,58,50,0.55), transparent 60%),   /* moss glow */
-    radial-gradient(900px 600px at 85% 18%, rgba(106,99,78,0.38), transparent 62%),  /* prairie glow */
-    radial-gradient(900px 700px at 70% 92%, rgba(138,75,31,0.22), transparent 65%),  /* autumn warmth */
-    linear-gradient(135deg, #0f1411 0%, #141a16 40%, #0f1411 100%);
+    radial-gradient(900px 600px at 15% 10%, rgba(63,74,62,0.45), transparent 60%),
+    radial-gradient(900px 600px at 85% 15%, rgba(110,100,79,0.35), transparent 65%),
+    radial-gradient(900px 700px at 75% 90%, rgba(154,90,34,0.25), transparent 70%),
+    linear-gradient(135deg, #2a2f29 0%, #34382f 40%, #2a2f29 100%);
   color: var(--text);
   line-height: 1.6;
 }
@@ -86,13 +85,12 @@ h1{
 }
 
 .card{
-  background: var(--card);
+  background: rgba(50, 56, 47, 0.95);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 18px 18px;
   margin: 18px 0;
-  backdrop-filter: blur(8px);
 }
 
 .hero h2{ margin-top: 0; }
