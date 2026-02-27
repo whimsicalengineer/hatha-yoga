@@ -1,24 +1,46 @@
 :root{
-  --bg: #f7f2e8;         /* beige */
-  --card: #fffaf0;       /* warm off-white */
-  --text: #1f2937;       /* deep slate */
-  --muted: #56616b;
-  --sage: #7a8f7a;       /* sage */
-  --sage-dark: #5f775f;
-  --border: rgba(31,41,55,0.10);
-  --shadow: 0 10px 30px rgba(31,41,55,0.08);
+  /* ===== Brand palette (dark earthy, GREEN-leaning) ===== */
+  --bg-1: #1b2318;     /* deep moss */
+  --bg-2: #242f1f;     /* olive moss */
+  --bg-3: #2f3b27;     /* slightly lighter olive */
+
+  --moss:  #3c512a;    /* greenish-green (no blue/gray) */
+  --olive: #556b2f;    /* classic olive */
+  --prairie:#6a634e;   /* earthy neutral */
+  --coffee:#7b5a3a;    /* warm brown */
+  --autumn:#8a4b1f;    /* rust */
+  --sand:  #b8aa94;    /* sand */
+  --wheat: #d9cfbf;    /* wheat */
+
+  /* Text */
+  --text:  #e8e2d6;              /* soft wheat (not pure white) */
+  --muted: rgba(232,226,214,0.72);
+
+  /* UI */
+  --border: rgba(217,207,191,0.14);
+  --shadow: 0 16px 44px rgba(0,0,0,0.32);
   --radius: 18px;
+
+  /* Links / accents */
+  --accent: #d9cfbf;             /* wheat */
+  --accent-2: #b8aa94;           /* sand */
 }
 
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+*{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; }
+
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  background: radial-gradient(1200px 600px at 10% 0%, rgba(122,143,122,0.18), transparent 50%),
-              radial-gradient(1200px 600px at 90% 0%, rgba(122,143,122,0.12), transparent 55%),
-              var(--bg);
   color: var(--text);
   line-height: 1.6;
+
+  /* ===== Background: DARK but not black, GREEN not gray/blue ===== */
+  background:
+    radial-gradient(900px 600px at 14% 12%, rgba(60,81,42,0.55), transparent 62%),   /* moss glow */
+    radial-gradient(900px 600px at 85% 16%, rgba(85,107,47,0.35), transparent 66%),  /* olive glow */
+    radial-gradient(1100px 800px at 92% 92%, rgba(184,170,148,0.20), transparent 70%),/* sand/beige glow */
+    radial-gradient(900px 700px at 70% 92%, rgba(138,75,31,0.16), transparent 72%),  /* tiny autumn warmth */
+    linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 42%, var(--bg-3) 100%);
 }
 
 .container{
@@ -28,116 +50,135 @@ body{
 }
 
 .header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
   padding-top: 28px;
 }
 
-.brand{ display: flex; align-items: center; gap: 12px; }
+.brand{ display:flex; align-items:center; gap:12px; }
+
 .logo{
   width: 44px; height: 44px;
-  display: grid; place-items: center;
+  display:grid; place-items:center;
   border-radius: 14px;
-  background: rgba(122,143,122,0.18);
+
+  /* subtle gradient, not flat */
+  background: linear-gradient(135deg, rgba(60,81,42,0.32), rgba(85,107,47,0.18));
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-}
-h1{
-  font-size: 22px;
-  margin: 0;
-}
-.subtitle{
-  margin: 2px 0 0;
-  color: var(--muted);
-  font-size: 14px;
+  backdrop-filter: blur(8px);
 }
 
+h1{ font-size: 22px; margin:0; }
+.subtitle{ margin:2px 0 0; color: var(--muted); font-size: 14px; }
+
 .nav{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
 }
+
 .nav a{
-  text-decoration: none;
-  color: var(--sage-dark);
+  text-decoration:none;
+  color: var(--accent);
   padding: 10px 12px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(255,250,240,0.8);
+
+  /* not flat */
+  background: linear-gradient(135deg, rgba(60,81,42,0.18), rgba(40,48,36,0.16));
+  backdrop-filter: blur(10px);
+
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
+
 .nav a.active, .nav a:hover{
-  background: rgba(122,143,122,0.16);
+  background: linear-gradient(135deg, rgba(85,107,47,0.22), rgba(60,81,42,0.12));
+  box-shadow: 0 10px 30px rgba(60,81,42,0.22);
+  transform: translateY(-1px);
 }
 
 .card{
-  background: var(--card);
+  /* ===== Cards: gradient across the card (you asked for this) ===== */
+  background: linear-gradient(
+    135deg,
+    rgba(60,81,42,0.22) 0%,
+    rgba(40,48,36,0.30) 45%,
+    rgba(85,107,47,0.16) 100%
+  );
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 18px 18px;
   margin: 18px 0;
+  backdrop-filter: blur(10px);
 }
 
 .hero h2{ margin-top: 0; }
+
 .pill-row{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
 }
+
 .pill{
   font-size: 13px;
   padding: 8px 10px;
   border-radius: 999px;
-  border: 1px solid var(--border);
-  background: rgba(122,143,122,0.10);
-  color: var(--sage-dark);
+  border: 1px solid rgba(217,207,191,0.16);
+
+  /* subtle left-right gradient */
+  background: linear-gradient(135deg, rgba(60,81,42,0.18), rgba(85,107,47,0.10));
+  color: rgba(232,226,214,0.86);
 }
 
 .grid{
-  display: grid;
+  display:grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
+
 @media (max-width: 860px){
   .grid{ grid-template-columns: 1fr; }
   .header{ flex-direction: column; align-items: flex-start; }
 }
 
 .link-card{
-  display: block;
-  text-decoration: none;
+  display:block;
+  text-decoration:none;
   color: inherit;
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
-}
-.link-card:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 14px 40px rgba(31,41,55,0.12);
-}
-.link-card h3{
-  margin: 0 0 6px;
-}
-.link-card p{
-  margin: 0 0 10px;
-  color: var(--muted);
-}
-.cta{
-  color: var(--sage-dark);
-  font-weight: 600;
+
+  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
 }
 
-.steps{
-  margin: 10px 0 0 18px;
+.link-card:hover{
+  transform: translateY(-3px);
+
+  /* mossy glow on hover */
+  box-shadow:
+    0 18px 55px rgba(0,0,0,0.40),
+    0 0 0 1px rgba(217,207,191,0.10),
+    0 0 36px rgba(60,81,42,0.28);
+  border-color: rgba(217,207,191,0.22);
 }
-.note{
-  margin-top: 12px;
-  color: var(--muted);
-  font-size: 14px;
+
+.link-card h3{ margin:0 0 6px; }
+.link-card p{ margin:0 0 10px; color: var(--muted); }
+
+.cta{
+  color: var(--accent);
+  font-weight: 650;
 }
+
+.steps{ margin: 10px 0 0 18px; }
+.note{ margin-top: 12px; color: var(--muted); font-size: 14px; }
 
 .footer{
   color: var(--muted);
   padding-bottom: 36px;
+  font-size: 14px;
 }
