@@ -1,8 +1,8 @@
 :root{
   /* ===== Brand palette (dark earthy, GREEN-leaning) ===== */
-  --bg-1: #1b2318;     /* deep moss */
-  --bg-2: #242f1f;     /* olive moss */
-  --bg-3: #2f3b27;     /* slightly lighter olive */
+  --bg-1: #141b12;   /* darker moss */
+  --bg-2: #1c2617;   /* darker olive */
+  --bg-3: #25311d;   /* darker but still green */
 
   --moss-strong: #334624;   /* darker by ~5% */
   --moss-deep: #28381d;     /* slightly deeper */
@@ -18,6 +18,9 @@
   --ink: #221f16;         /* dark warm ink for pill/cta text */
   --chip-bg: rgba(217, 207, 191, 0.85);   /* wheat chip background */
   --chip-border: rgba(217, 207, 191, 0.35);
+
+  --pill-text: rgba(217,207,191,0.92); /* wheat text */
+  --nav-text: rgba(217,207,191,0.92);
 
   /* Text */
   --text:  #e8e2d6;              /* soft wheat (not pure white) */
@@ -43,10 +46,10 @@ body{
 
   /* ===== Background: DARK but not black, GREEN not gray/blue ===== */
   background:
-    radial-gradient(900px 600px at 14% 12%, rgba(60,81,42,0.55), transparent 62%),   /* moss glow */
-    radial-gradient(900px 600px at 85% 16%, rgba(85,107,47,0.35), transparent 66%),  /* olive glow */
-    radial-gradient(1100px 800px at 92% 92%, rgba(184,170,148,0.20), transparent 70%),/* sand/beige glow */
-    radial-gradient(900px 700px at 70% 92%, rgba(138,75,31,0.16), transparent 72%),  /* tiny autumn warmth */
+    radial-gradient(900px 600px at 14% 12%, rgba(60,81,42,0.42), transparent 62%),   /* moss (darker) */
+    radial-gradient(900px 600px at 85% 16%, rgba(85,107,47,0.26), transparent 66%),  /* olive (darker) */
+    radial-gradient(1100px 800px at 92% 92%, rgba(184,170,148,0.20), transparent 70%),/* beige SAME */
+    radial-gradient(900px 700px at 70% 92%, rgba(138,75,31,0.14), transparent 72%),  /* slightly softer warm */
     linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 42%, var(--bg-3) 100%);
 }
 
@@ -100,7 +103,7 @@ h1{ font-size: 22px; margin:0; }
 
   border: 1px solid rgba(232,239,226,0.15);
 
-  color: var(--moss-text);
+  color: var(--nav-text);
   font-weight: 600;
 
   box-shadow: 
@@ -156,7 +159,7 @@ h1{ font-size: 22px; margin:0; }
 
   border: 1px solid rgba(232,239,226,0.12);
 
-  color: var(--moss-text);
+  color: var(--pill-text);
   font-weight: 600;
 
   box-shadow: 
