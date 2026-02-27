@@ -12,6 +12,10 @@
   --sand:  #b8aa94;    /* sand */
   --wheat: #d9cfbf;    /* wheat */
 
+  --ink: #221f16;         /* dark warm ink for pill/cta text */
+  --chip-bg: rgba(217, 207, 191, 0.85);   /* wheat chip background */
+  --chip-border: rgba(217, 207, 191, 0.35);
+
   /* Text */
   --text:  #e8e2d6;              /* soft wheat (not pure white) */
   --muted: rgba(232,226,214,0.72);
@@ -85,18 +89,27 @@ h1{ font-size: 22px; margin:0; }
   color: var(--accent);
   padding: 10px 12px;
   border-radius: 999px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(217,207,191,0.18);
 
-  /* not flat */
-  background: linear-gradient(135deg, rgba(60,81,42,0.18), rgba(40,48,36,0.16));
+  /* Slightly brighter than background so it doesn't disappear */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 250, 240, 0.08),
+    rgba(60,81,42,0.14)
+  );
   backdrop-filter: blur(10px);
 
   transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
 
 .nav a.active, .nav a:hover{
-  background: linear-gradient(135deg, rgba(85,107,47,0.22), rgba(60,81,42,0.12));
-  box-shadow: 0 10px 30px rgba(60,81,42,0.22);
+  background: linear-gradient(
+    135deg,
+    rgba(217,207,191,0.14),
+    rgba(85,107,47,0.14)
+  );
+  border-color: rgba(217,207,191,0.28);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 24px rgba(60,81,42,0.22);
   transform: translateY(-1px);
 }
 
@@ -129,11 +142,16 @@ h1{ font-size: 22px; margin:0; }
   font-size: 13px;
   padding: 8px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(217,207,191,0.16);
 
-  /* subtle left-right gradient */
-  background: linear-gradient(135deg, rgba(60,81,42,0.18), rgba(85,107,47,0.10));
-  color: rgba(232,226,214,0.86);
+  /* More visible pill */
+  background: linear-gradient(135deg, var(--chip-bg), rgba(184,170,148,0.70));
+  border: 1px solid var(--chip-border);
+
+  /* Darker text inside pill */
+  color: var(--ink);
+  font-weight: 650;
+
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
 }
 
 .grid{
@@ -170,8 +188,14 @@ h1{ font-size: 22px; margin:0; }
 .link-card p{ margin:0 0 10px; color: var(--muted); }
 
 .cta{
-  color: var(--accent);
-  font-weight: 650;
+  color: rgba(232,226,214,0.92);  /* brighter than muted but not pure white */
+  font-weight: 750;
+  letter-spacing: 0.2px;
+}
+
+.link-card:hover .cta{
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .steps{ margin: 10px 0 0 18px; }
