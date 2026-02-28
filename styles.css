@@ -231,10 +231,22 @@ h1{ font-size: 22px; margin:0; }
 
 /* ===== Bigger pills ===== */
 .pill{
-  font-size: 14px;
-  padding: 10px 14px;  /* bigger */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 15px;          /* bigger text */
+  padding: 12px 18px;       /* taller + wider */
   border-radius: 999px;
   cursor: pointer;
+
+  font-weight: 600;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pill-icon{
+  font-size: 18px;
 }
 
 /* ===== New home dashboard layout (3 category cards) ===== */
@@ -268,13 +280,21 @@ h1{ font-size: 22px; margin:0; }
 }
 
 .category-icon{
-  width: 44px;
-  height: 44px;
+  width: 60px;              /* bigger container */
+  height: 60px;
   display: grid;
   place-items: center;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(60,81,42,0.24), rgba(85,107,47,0.12));
-  border: 1px solid rgba(232,239,226,0.14);
+  border-radius: 18px;
+
+  font-size: 28px;          /* bigger emoji */
+
+  background: linear-gradient(
+    135deg,
+    rgba(60,81,42,0.28),
+    rgba(85,107,47,0.16)
+  );
+
+  border: 1px solid rgba(232,239,226,0.18);
 }
 
 .category-title{
