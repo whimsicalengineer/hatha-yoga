@@ -73,7 +73,7 @@ body{
   width: 44px; height: 44px;
   display:grid; place-items:center;
   border-radius: 14px;
-  font-size: 18px;
+  font-size: 20px;
 
   /* subtle gradient, not flat */
   background: linear-gradient(135deg, rgba(60,81,42,0.32), rgba(85,107,47,0.18));
@@ -247,7 +247,7 @@ h1{ font-size: 22px; margin:0; }
 }
 
 .pill-icon{
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /* ===== New home dashboard layout (3 category cards) ===== */
