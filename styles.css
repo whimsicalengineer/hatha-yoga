@@ -326,9 +326,9 @@ h1{ font-size: 22px; margin:0; }
   border: 1px solid rgba(232,239,226,0.14);
 
   color: var(--moss-text);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  opacity: 0.9;
+  opacity: 0.86;
 
   box-shadow:
     0 10px 22px rgba(0,0,0,0.28),
