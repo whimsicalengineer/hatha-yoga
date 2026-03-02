@@ -140,10 +140,6 @@ h1{ font-size: 22px; margin:0; }
 
 .hero h2{ margin-top: 0; }
 
-.hero p{
-  max-width: 680px;
-}
-
 .pill-row{
   display:flex;
   gap:14px;
